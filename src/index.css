@@ -1,0 +1,260 @@
+@font-face {
+	font-family: "Averta";
+	src: url("../src/assets/averta.otf");
+}
+:root {
+	--font: "Averta";
+}
+* {
+	font-family: var(--font);
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+/* form login*/
+.parent__form__div{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.parent__form__inner{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 85vh;
+	width: 90%;
+	margin-inline: auto;
+	border-radius: 10px;
+	box-shadow: 0 5px 60px -20px #c0bdbd;
+	overflow: hidden;
+}
+.form__div, .image__div{
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+.image__div::before{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(0 0 0 / 50%);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	content: '';
+}
+.image__div img{
+	height: 100%;
+	object-fit: cover;
+	-o-object-fit: cover;
+	object-position: cover;
+	-o-object-position: center center;
+}
+.image__div .copyright{
+	position: absolute;
+	border-radius: 2em;
+	background-color: #fff;
+	border: 2px solid rgb(236, 20, 20);
+	bottom: 1.5rem;
+	right: 3rem;
+	z-index: 1;
+	padding: 4px 15px;
+	display: grid;
+	place-content: center;
+}
+.copyright span{
+	font-size: 14px;
+}
+/* form-inputs for the registration*/
+form.register__div{
+	padding: 3rem 5rem;
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.register__div .each__div:first-child{
+	text-align: start;
+	margin-bottom: 1rem
+}
+.register__div input{
+	border: 1px solid #d0d0d0 ;
+	border-radius: 6px;
+	width: 100%;
+	min-height: 3.2rem;
+	padding: .5rem 1rem;
+	background-color: #f0eeeb;
+	-webkit-transition: 100ms ease-in-out;
+	-moz-transition: 100ms ease-in-out;
+	-ms-transition: 100ms ease-in-out;
+	-o-transition: 100ms ease-in-out;
+	transition: 100ms ease-in-out;
+}
+.register__div :is(input:focus){
+	border: none;
+	outline: 2px solid rgb(236, 20, 20);
+	background-color: #fff;
+}
+.each__div button{
+	width: 100%;
+	background-color: rgb(236, 20, 20);
+	color: white;
+	border-radius: 6px;
+	min-height: 3rem;
+	border: none;
+	font-size: 14px;
+	letter-spacing: .3px;
+}
+form.register__div .extra a{
+	font-size: 14px;
+	color: rgb(236, 20, 20);
+}
+
+/* ! registration form */
+.container {
+	min-height: 100vh;
+	position: relative;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+}
+.container .aside__left{
+	width: 30%;
+	background-color: rgb(236, 20, 20);
+	color: #fff;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.aside__left .top{
+	padding-top: .5rem;
+}
+.aside__left .top h2{
+	font-size: 2rem;
+}
+.aside__left .body{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	margin-inline: auto;
+}
+.container :is(.aside__left, .aside__right){
+	min-height: 100%
+}
+.container .aside__right{
+	background-color: transparent;
+	width: 70%;
+	background-image: url('../src/images/delivery.jfif');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	min-height: 100vh;
+	position: relative;
+}
+.aside__right::before{
+	background-color: rgba(0 0 0 / 50%);
+	width: 100%;
+	height: 100%;
+	content:'';
+}
+.aside__right::before, .aside__right form{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.aside__right .top{
+	position: relative;
+	display: flex;
+	align-items: center ;
+	justify-content: flex-end;
+	padding-right: 2rem;
+	padding-top: 1rem;
+	}
+	.aside__right .top p{
+	color: #fff;
+	font-size: 15px;
+}
+.aside__right .top p a{
+	margin-left: 1rem;
+	font-size: 14px;
+	color: #fff;
+	border: 2px solid rgb(236, 20, 20);
+	text-decoration: none;
+	padding: 10px 2rem;
+	border-radius: 5px;
+}
+.aside__right form{
+	width: 40%;
+	margin-inline: auto;
+}
+.aside__right form .input{
+	margin-bottom: 1.5rem;
+}
+.aside__right form input{
+	border: 1px solid #cac9c9;
+	border-radius: 6px;
+	width: 100%;
+	min-height: 3.2rem;
+	padding: .5rem 1rem;
+}
+.aside__right form .form__header{
+	margin-bottom: 2rem;
+	color: #cac9c9;
+	text-align: start;
+	font-size: 1.2rem
+}
+.aside__right form :is(input:focus){
+	border: none;
+	outline: 2px solid rgb(236, 20, 20);
+}
+.aside__right form button{
+	background-color: rgb(236, 20, 20);
+	color:#fff;
+	border-radius: 4px;
+	-webkit-transition: 300ms ease-in-out;
+	-moz-transition: 300ms ease-in-out;
+	-ms-transition: 300ms ease-in-out;
+	-o-transition: 300ms ease-in-out;
+	transition: 300ms ease-in-out;
+	padding: 12px 3em;
+	border: none;
+	font-size: 1rem
+}
+.aside__right form .button{
+	text-align: start;
+}
+
+
+/* TODO error page */
+.content__box .error__display > div{
+	margin-bottom: 1rem
+}
+.content__box .error__type h1{
+	font-size: 9rem;
+	color:rgb(236, 20, 20);
+	line-height: 1.2;
+}
+.content__box .go__back a{
+	background-color: rgb(236, 20, 20);
+	border-radius: 6px;
+	font-size: 14px;
+	text-decoration: none;
+	padding: 13px 3rem;
+	color: #fff;
+}
+.content__box .go__back{
+	margin-top: 1.5rem
+}
