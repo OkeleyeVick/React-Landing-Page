@@ -1,0 +1,191 @@
+@font-face {
+	font-family: SpaceGrotesk;
+	src: url("./SpaceGrotesk-VariableFont_wght.ttf");
+}
+:root {
+	--font-var: SpaceGrotesk;
+	--primary-clr: rgb(12, 9, 49);
+	--primary-clr-light: rgba(18, 13, 75, 0.8);
+	--white: #fff;
+}
+/* defaults */
+* {
+	box-sizing: border-box;
+	font-family: var(--font-var);
+	margin: 0;
+	padding: 0;
+}
+:is(h1, h2, h3, h4, h5, h6) {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 5rem;
+	background-color: #ffffffcc;
+	box-shadow: 0 0 30px -1rem #d3d3d3;
+}
+nav a {
+	color: #090ddfac;
+	margin-right: 1rem;
+}
+.container {
+	width: 60%;
+	margin-inline: auto;
+	padding-top: 3rem;
+}
+.new-movies {
+	margin-top: 3rem;
+}
+.eachMovie {
+	margin-bottom: 2rem;
+	border-radius: 6px;
+	border: 1px solid #f3f3f3;
+	-webkit-transition: 300ms ease-in-out;
+	-moz-transition: 300ms ease-in-out;
+	-ms-transition: 300ms ease-in-out;
+	-o-transition: 300ms ease-in-out;
+	transition: 300ms ease-in-out;
+	box-shadow: 0 0 30px -1rem #c4c4c4;
+	padding: 1rem 2rem;
+}
+.eachMovie:hover {
+	box-shadow: 0 10px 40px -0.3rem #393737;
+}
+.eachMovie > div {
+	margin-bottom: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+}
+.eachMovie > div span {
+	margin-left: 0.5rem;
+}
+.eachMovie button {
+	border: none;
+	background-color: var(--primary-clr);
+	color: var(--white);
+	font-size: 1rem;
+	border-radius: 7px;
+	padding: 13px 2rem;
+}
+form {
+	margin-top: 3rem;
+}
+form > div {
+	margin-bottom: 1.2rem;
+}
+form > div > * {
+	display: block;
+}
+form > div label {
+	font-size: 14px;
+}
+form :is(input, textarea) {
+	border: 1px solid #dfdfdf;
+	font-size: 15px;
+	border-radius: 4px;
+	width: 60%;
+	margin-top: 5px;
+}
+form :is(input, textarea):focus {
+	outline: 2px solid var(--primary-clr-light);
+	box-shadow: 0 0 10px -2px var(--primary-clr-light);
+}
+form input {
+	min-height: 2.8em;
+	padding: 5px 10px;
+}
+form textarea {
+	min-height: 5rem;
+	padding: 10px 0 0 5px;
+}
+form :is(textarea, input)::placeholder {
+	font-size: 14px;
+	color: #d1d1d1;
+}
+form .add button {
+	background-color: var(--primary-clr-light);
+	border: none;
+	border-radius: 5px;
+	color: var(--white);
+	font-size: 15px;
+	padding: 13px 2rem;
+}
+
+.go-back,
+.go-back .icon {
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	border: none;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.go-back .icon svg {
+	font-size: 1.1rem;
+}
+.go-back .small {
+	margin-left: 1rem;
+}
+.each-data > div {
+	display: flex;
+	align-items: center;
+}
+.each-data > div span {
+	margin-left: 1rem;
+	font-size: 1rem;
+}
+/* media screens */
+@media all and (min-width: 767.5px) {
+	h1 {
+		font-size: 2.2rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.8rem;
+	}
+	h4 {
+		font-size: 1.6rem;
+	}
+	h5 {
+		font-size: 1.4rem;
+	}
+	h6 {
+		font-size: 1rem;
+	}
+}
+@media all and (max-width: 767px) {
+	h1 {
+		font-size: 1.7rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
+	h3 {
+		font-size: 1.3rem;
+	}
+	h4 {
+		font-size: 1.1rem;
+	}
+	h5 {
+		font-size: 0.9rem;
+	}
+	h6 {
+		font-size: 0.8rem;
+	}
+	.header {
+		padding: 0.7rem 1.3rem;
+	}
+}
