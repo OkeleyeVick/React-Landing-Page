@@ -1,37 +1,26 @@
-import "./assets/styles/custom.css";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import NewMovie from "./components/NewMovie";
-// import MovieDetail from "./components/MovieDetail";
-import MovieDetailFake from "./components/MovieDetailFake";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StyledComponents from "./components/StyledComponents";
+import GlobalStyles from "./assets/styles/GlobalStyles";
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter } from "react-router-dom";
+import styled from "styled-components";
+import Main from "./components/MainBody/Main";
+
+const Container = styled.div`
+	@media all and (min-width: 1024px) {
+		padding: 0 7rem;
+	}
+`;
 
 function App() {
 	return (
-		<div className="App">
-			<Router>
-				<Navbar />
-				<div className="container">
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="addmovies" element={<NewMovie />} />
-						{/* <Route
-							path="moviedetail/:id"
-							element={<MovieDetail />}
-						/> */}
-						<Route
-							path="moviedetail/:id"
-							element={<MovieDetailFake />}
-						/>
-						<Route
-							path="components"
-							element={<StyledComponents />}
-						/>
-					</Routes>
-				</div>
-			</Router>
-		</div>
+		<BrowserRouter>
+			<div className="App">
+				<GlobalStyles />
+				<Container>
+					<Navbar />
+					<Main />
+				</Container>
+			</div>
+		</BrowserRouter>
 	);
 }
 
